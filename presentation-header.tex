@@ -1,0 +1,69 @@
+
+%%% Enhance support for image inclusion
+%
+% Resize images that are too large (in width or height).
+% Pandoc already includes a similar hack for the width,
+% but images can also be too heigh.
+%
+% Depending on the beamer template used and the resulting
+% available space, you might want to adjust the target
+% maximum height (here: 0.65, which is 65% of the frame
+% height) to another value. Remember headline, footline
+% and titles may need additional space.
+%
+% References:
+% - https://groups.google.com/forum/#!topic/pandoc-discuss/6H-6NcFtFUk
+% - http://tex.stackexchange.com/a/67462/11198
+\usepackage{letltxmacro}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else0.65\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>0.65\textheight 0.65\textheight\else0.65\Gin@nat@height\fi}
+\makeatother
+\AtBeginDocument{
+  \LetLtxMacro\OOldincludegraphics\includegraphics
+  \renewcommand{\includegraphics}[2][]{%
+    \OOldincludegraphics[#1,width=\maxwidth,height=\maxheight,keepaspectratio]{#2}}
+}
+
+
+%%% Custom example LaTeX header code %%%
+%
+% This is example LaTeX header code I commonly use to enhance
+% default behavior, fix some quirks or import packages I use.
+% These can be savely removed and mainly have the purpose of
+% demonstrating custom changes.
+
+% Listings and algorithms
+\usepackage{listings,algorithm,algorithmic}
+\lstset{
+	basicstyle=\ttfamily\footnotesize,	% monospaced font
+	breaklines=true,										% prevent overflow
+  keywordstyle=\color{blue}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  commentstyle=\color{green}\ttfamily,
+  morecomment=[l][\color{magenta}]{\#A},
+  frame=lrtb,
+  framerule=1px,
+  xleftmargin=1em,
+}
+% Don't break quotes in listings
+\usepackage{textcomp}
+\lstset{upquote=true}
+
+% Only show footnotes after the item is actually displayed
+\renewcommand\footnoterule{%
+  \vspace*{1.5ex}\rule{.4\columnwidth}{0.4pt}\vspace*{.5ex}}
+
+% Move paragraphs a little bit close to each other
+\setlength{\parskip}{1ex plus4mm minus3mm}
+
+% Support tifs by converting them.
+% http://tex.stackexchange.com/a/89993
+% \usepackage{epstopdf}
+% \DeclareGraphicsRule{.tiff}{png}{.png}{%
+%   \noexpand\epstopdfcall{convert #1 \noexpand\OutputFile}%
+% }
+\DeclareGraphicsRule{.tif}{png}{.png}{%
+  \noexpand\epstopdfcall{convert #1 \noexpand\OutputFile}%
+}
+

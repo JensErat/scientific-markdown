@@ -1,0 +1,170 @@
+\documentclass[12pt,twocolumn]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{listings}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Jens Erat},
+            pdftitle={Lorem Ipsum},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+\title{Lorem Ipsum\\\vspace{0.5em}{\large Opera sine nomine scripta}}
+\author{Jens Erat}
+\date{2015-02-03}
+%%% Special LaTeX headers
+%
+% Remove and edit as desired. Simply serves as an example.
+% Here, reduce excessive use of whitespace a little bit.
+
+\usepackage{titling}
+\setlength{\droptitle}{-1.5in}
+\parskip.5ex plus.5ex minus0.25ex
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod
+tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea
+commodi consequat. Quis aute iure reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat
+cupiditat non proident, sunt in culpa qui officia deserunt mollit anim
+id est laborum. {[}1{]}
+\end{abstract}
+
+\section{Duis autem}\label{duis-autem}
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero
+eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum
+dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+\section{Ut wisi}\label{ut-wisi}
+
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
+accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+delenit augue duis dolore te feugait nulla facilisi.
+
+\subsection{Nam liber}\label{nam-liber}
+
+Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet
+doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
+minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+nisl ut aliquip ex ea commodo consequat.
+
+\subsubsection{Duis autem}\label{duis-autem-1}
+
+Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/kitten.jpg}
+\caption{Kitten time! {[}2{]}}
+\end{figure}
+
+\section{At vero}\label{at-vero}
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At
+accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy
+sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd
+magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem
+ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+aliquyam erat.
+
+\section{Consetetur sadipscing}\label{consetetur-sadipscing}
+
+Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
+sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.
+
+\section*{References}\label{references}
+\addcontentsline{toc}{section}{References}
+
+{[}1{]} Lorem ipsum --- Wikisource, 2013.
+\emph{\url{http://la.wikisource.org/w/index.php?title=Lorem_ipsum\&oldid=61677}}.
+
+{[}2{]} Six weeks old cat: 2005.
+\emph{\url{http://commons.wikimedia.org/w/index.php?title=File:Six_weeks_old_cat_\%28aka\%29.jpg\&oldid=141863103}}.
+
+\begin{center}
+  \includegraphics[width=2cm]{images/by-sa.pdf}
+  
+  \scriptsize This work is licensed under the Creative Commons
+  Attribution-ShareAlike 3.0 Unported License.\\ To view a copy
+  of this license, visit
+  \url{http://creativecommons.org/licenses/by-sa/3.0/}.
+\end{center}
+
+\end{document}
